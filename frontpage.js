@@ -2,61 +2,6 @@ const url = "https://striveschool-api.herokuapp.com/api/product/";
 const key =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmNmNDk4YTAwOGQxMDAwMTVkZDNiNmUiLCJpYXQiOjE3MjQ4NjA4MTAsImV4cCI6MTcyNjA3MDQxMH0.F6e79uACX9WdmxHxyk8cyUokP2DS-lMkpdkk31hFao8";
 
-// async function postProduct(product) {
-//   const requestOption = {
-//     headers: {
-//       "Content-Type": "application/json",
-//       Authorization: key,
-//     },
-//     method: "POST",
-//     body: JSON.stringify(product),
-//   };
-//   fetch(url, requestOption);
-// }
-
-// async function getProduct() {
-//   var response = await fetch(url, {
-//     headers: {
-//       Authorization: key,
-//     },
-//   });
-//   var json = await response.json();
-//   return json;
-// }
-
-// async function showProduct() {
-//   const resultProduct = await getProduct();
-//   var li = `<tr><th>Name</th><th>Description</th><th>Brand</th><th>Price</th></tr>`;
-//   resultProduct.forEach((product) => {
-//     li += `<tr><td>${product.name}</td><td>${product.description}</td><td>${product.brand}</td><td>${product.price}</td></tr>`;
-//   });
-//   document.getElementById("product").innerHTML = li;
-// }
-
-// showProduct();
-
-// async function createProduct() {
-//     const product = {
-//     name: "productName",
-//     price: 45.99,
-//     description: "afvdddbdbdd",
-//     brand: "abibas",
-//     imageUrl: "url",
-//     };
-//     document.getElementById("loader").innerHTML = `<div class="wrap"> Caricamento... </div>`
-//     await postProduct(product);
-//     document.getElementById("loader").innerHTML = ""
-//     setTimeout(() => {
-//       document.location = document.location;
-//     }, 1500);
-// }
-
-// submitButton.addEventListener(`click`, function(){
-//   document.getElementById("productName").innerHTML = ""
-//   document.getElementById("productDescription").innerHTML = ""
-//   document.getElementById("productBrand").innerHTML = ""
-//   document.getElementById("productName").innerHTML = ""
-// })
 
 async function call(product) {
   const response = await fetch(url, {
@@ -118,10 +63,6 @@ async function call(product) {
       }
     });
 
-    // cardBody.append(title,p,a,editButton,deleteButton)
-    // card.append(cardBody)
-    // col.append(card)
-    // target.append(col)
   });
 }
 

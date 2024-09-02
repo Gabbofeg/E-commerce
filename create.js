@@ -99,10 +99,6 @@ async function viewProduct() {
       }
     });
 
-    // cardBody.append(title,p,a,editButton,deleteButton)
-    // card.append(cardBody)
-    // col.append(card)
-    // target.append(col)
   });
 }
 
