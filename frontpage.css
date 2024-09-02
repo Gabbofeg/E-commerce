@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.myTable{
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+.card{
+    width: 100%;
+    object-fit: contain;
+
+}
+
+.myCard{
+    height: 200px;
+    margin-top: 5vh;
+}
+
+.card-body{
+    background-color: #C9DFFF;
+}
+
+.navMenu{
+    border-bottom: 1px solid grey;
+}
+

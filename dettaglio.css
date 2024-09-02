@@ -1,0 +1,11 @@
+#showProduct{
+    display: flex;
+    border: 1px solid grey;
+    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#name{
+    justify-content: end;
+}

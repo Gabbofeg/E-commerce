@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Modifica un prodotto</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <form id="inputForm">
+            <!-- Al fine di creare un nuovo oggetto nel database lato server, procedo a realizzare un Form contenente un campo per ogni proprietà dell'oggetto che dovrò inviare -->
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="name"
+            />
+
+            <input
+              type="number"
+              id="price"
+              class="form-control"
+              placeholder="Prezzo"
+            />
+
+            <input
+              type="text"
+              id="brand"
+              class="form-control"
+              placeholder="Brand"
+            />
+
+            <input
+              type="text"
+              id="description"
+              class="form-control"
+              placeholder="Descrizione"
+            />
+
+            <button class="btn btn-success" id="salva" type="submit">
+              Salva
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="editProduct.js"></script>
+  </body>
+</html>
