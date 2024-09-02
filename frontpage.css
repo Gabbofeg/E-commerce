@@ -7,13 +7,12 @@ body{
     border-right: 1px solid grey;
 }
 .card{
-
     object-fit: cover;
+    box-shadow: 5px 10px 5px #afb0b1;
 
 }
 
 .myCard{
-    /* height: 200px; */
     margin-top: 5vh;
 }
 

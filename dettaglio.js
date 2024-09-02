@@ -9,6 +9,10 @@ const saveButton = document.getElementById("salva");
 const deleteButton = document.createElement("button");
 const editButton = document.createElement("a");
 
+function toBold(value) {
+  return "<span style='font-weight: bold;'>" + value + "</span>"
+}
+
 async function fillForm(p) {
   const url = new URLSearchParams(location.search);
 
@@ -21,13 +25,13 @@ async function fillForm(p) {
     },
   });
   const dati = await response.json();
-  const nameParagraph = "<p id='name'>" + "name: " + dati.name + "</p>";
-  const brandParagraph = "<p style='width: 35vh'>" + "brand: " + dati.brand + "</p>";
-  const priceParagraph = "<p style='width: 35vh'>" + "price: " + dati.price + "</p>";
-  const descriptionParagraph ="<p style='width: 35vh'>" + "description: " + dati.description + "</p>";
+  const nameParagraph = "<p id='name'>" + toBold("Name: ") + dati.name + "</p>";
+  const brandParagraph = "<p style='width: 35vh'>" + toBold("Brand: ") + dati.brand + "</p>";
+  const priceParagraph = "<p style='width: 35vh'>" + toBold("Price: ")+ dati.price + "</p>";
+  const descriptionParagraph ="<p style='width: 35vh'>" + toBold("Description: ") + dati.description + "</p>";
   const urlPhoto ="<img style='width: 35vh' src="+ dati.imageUrl +"></img>";
   divShowProduct.innerHTML =
-    "<div>" +
+    "<div style='box-shadow: 5px 10px 5px #afb0b1; background-color: white; padding: 5px; border: 1px solid grey; border-radius: 20px' >" +
     urlPhoto +
     nameParagraph +
     brandParagraph +
