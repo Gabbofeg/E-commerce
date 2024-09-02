@@ -7,6 +7,9 @@ const brand = document.getElementById("brand");
 const description = document.getElementById("description");
 const name = document.getElementById("name");
 const inputForm = document.getElementById("inputForm");
+const imageUrl = document.getElementById('imageUrl')
+
+
 const deleteButton = document.createElement("button");
 const editButton = document.createElement("a");
 // const imageUrl = document.getElementById("imageUrl");
@@ -32,6 +35,7 @@ async function viewProduct() {
     brand.value = dati.brand;
     description.value = dati.description;
     name.value = dati.name;
+    imageUrl.value = dati.imageUrl;
   }
 }
 
@@ -44,6 +48,7 @@ inputForm.addEventListener("submit", async (e) => {
     brand: brand.value,
     price: Number(price.value),
     description: description.value,
+    imageUrl: imageUrl.value
   };
 
   const url = new URLSearchParams(location.search);

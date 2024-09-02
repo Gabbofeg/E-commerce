@@ -7,13 +7,13 @@ body{
     border-right: 1px solid grey;
 }
 .card{
-    width: 100%;
-    object-fit: contain;
+
+    object-fit: cover;
 
 }
 
 .myCard{
-    height: 200px;
+    /* height: 200px; */
     margin-top: 5vh;
 }
 

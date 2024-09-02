@@ -60,6 +60,7 @@ async function viewProduct() {
     const a = document.createElement("a");
     const deleteButton = document.createElement("button");
     const editButton = document.createElement("a");
+    const imageUrl = document.createElement("img")
 
     col.classList.add("col-4");
     card.classList.add("card", "myCard");
@@ -69,7 +70,10 @@ async function viewProduct() {
     deleteButton.classList.add("btn", "btn-danger");
     editButton.classList.add("btn", "btn-warning");
     description.classList.add("description");
+    imageUrl.classList.add("img-fluid", "rounded-circle");
 
+
+    imageUrl.src = product.imageUrl;
     title.textContent = product.name;
     description.textContent = product.description;
     a.innerText = "Visualizza";
@@ -77,7 +81,7 @@ async function viewProduct() {
     deleteButton.innerText = "Elimina";
     editButton.href = "editProduct.html?id=" + product._id;
     editButton.innerText = "Modifica";
-    cardBody.append(title, description, editButton, deleteButton);
+    cardBody.append(imageUrl, title, description, editButton, deleteButton);
     card.append(cardBody);
     col.append(card);
     target.append(col);
