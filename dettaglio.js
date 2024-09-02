@@ -21,14 +21,14 @@ async function fillForm(p) {
     },
   });
   const dati = await response.json();
-  const nameParagraph = "<p>" + "name: " + dati.name + "</p>";
-  const brandParagraph = "<p>" + "brand: " + dati.brand + "</p>";
-  const priceParagraph = "<p>" + "price: " + dati.price + "</p>";
-  const descriptionParagraph =
-    "<p>" + "description: " + dati.description + "</p>";
-
+  const nameParagraph = "<p id='name'>" + "name: " + dati.name + "</p>";
+  const brandParagraph = "<p style='width: 35vh'>" + "brand: " + dati.brand + "</p>";
+  const priceParagraph = "<p style='width: 35vh'>" + "price: " + dati.price + "</p>";
+  const descriptionParagraph ="<p style='width: 35vh'>" + "description: " + dati.description + "</p>";
+  const urlPhoto ="<img style='width: 35vh' src="+ dati.imageUrl +"></img>";
   divShowProduct.innerHTML =
     "<div>" +
+    urlPhoto +
     nameParagraph +
     brandParagraph +
     priceParagraph +
@@ -37,3 +37,4 @@ async function fillForm(p) {
 }
 
 fillForm();
+

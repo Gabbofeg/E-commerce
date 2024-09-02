@@ -13,14 +13,14 @@ createButton.addEventListener("click", (e) => {
     const brand = document.getElementById("brand").value;
     const description = document.getElementById("description").value;
     const name = document.getElementById("name").value;
-    const imageUrl = document.getElementById("imageUrl").url;
+    const imageUrl = document.getElementById("imageUrl").value;
 
     const prodotto = {
       name: name,
       brand: brand,
       price: Number(price),
       description: description,
-      imageUrl: "url",
+      imageUrl: imageUrl,
     };
     console.log(JSON.stringify(prodotto));
 
